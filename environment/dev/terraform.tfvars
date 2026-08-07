@@ -58,6 +58,12 @@ public_ips = {
     location            = "southeastasia"
     allocation_method   = "Static"
   }
+  public_ip3 = {
+    name                = "publicip3-dev"
+    resource_group_name = "resourcegroup1411-dev"
+    location            = "southeastasia"
+    allocation_method   = "Static"
+  }
 }
 
 vms = {
@@ -103,7 +109,7 @@ vms = {
     admin_username       = "adminuser"
     # admin_password ab yaha nahi likha jaata — Key Vault module isse generate/inject karta hai
     subnet_name          = "dbsubnet1-dev"
-    public_ip_name       = ""
+    public_ip_name       = "publicip3-dev"
     virtual_network_name = "Terraformvnet1-dev"
     caching              = "ReadWrite"
     storage_account_type = "Standard_LRS"
